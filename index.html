@@ -1,20 +1,113 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
+<head>
+  <title>Dog-go</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+
+   <!-- fontawesome cdn -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR/HEADER -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+      Dog-go
+    </a>
+    <form class="form-inline">
+      <ul class="navbar-nav"></ul>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">I'm Searching For..</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Dog Parks</a>
+          <a class="dropdown-item" href="#">Dog Groomers</a>
+          <a class="dropdown-item" href="#">Veterinarians</a>
+          <a class="dropdown-item" href="#">Boarding</a>
+        </div>
+      </li>
+      </ul>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Fetch</button>
+    </form>
+  </nav>
+
+  <div class="container-fluid">
+    <div clas="row">
+      <div class="col-md-6">
+        <div id="listings-area">
+            <div class="card bg-dark text-white">
+                <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">Park Name</h5>
+                  <p class="card-text">Dallas, TX</p>
+                  <p class="card-text">Rating: <i class="fas fa-paw"></i></p>
+                </div>
+              </div>
+              <div class="card bg-dark text-white">
+                  <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
+                  <div class="card-img-overlay">
+                    <h5 class="card-title">Park Name</h5>
+                    <p class="card-text">Dallas, TX</p>
+                    <p class="card-text">Rating</p>
+                  </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">Park Name</h5>
+                      <p class="card-text">Dallas, TX</p>
+                      <p class="card-text">Rating</p>
+                    </div>
+                  </div>
+        </div>
+       
+      </div>
+      <div class="col-md-6">
+        <div id="map-area">
+            Map area
+        </div>
       
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Javascript file -->
+  <script src="assets/js/app.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
+
+</body>
+
 </html>
