@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Dog-go</title>
+  <title>Dog-Go</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,16 +25,17 @@
 <body>
 
   <!-- NAVBAR/HEADER -->
+  
   <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
       <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
-      Dog-go
+      Dog-Go
     </a>
     <form class="form-inline">
       <ul class="navbar-nav"></ul>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">I'm Searching For..</a>
+          aria-haspopup="true" aria-expanded="false">I'm Searching For</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Dog Parks</a>
           <a class="dropdown-item" href="#">Dog Groomers</a>
@@ -43,20 +44,20 @@
         </div>
       </li>
       </ul>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Fetch</button>
+      <button class="btn btn-success my-2 my-sm-0" type="submit">Go Fetch</button>
     </form>
   </nav>
 
-  <div class="container-fluid">
+  <div class="container">
     <div clas="row">
       <div class="col-md-6">
         <div id="listings-area">
             <div class="card bg-dark text-white">
                 <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
                 <div class="card-img-overlay">
-                  <h5 class="card-title">Park Name</h5>
-                  <p class="card-text">Dallas, TX</p>
-                  <p class="card-text">Rating: <i class="fas fa-paw"></i></p>
+                  <h5 class="card-title" id="place-name">Park Name</h5>
+                  <p class="card-text" id="place-location">Dallas, TX</p>
+                  <p class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></p>
                 </div>
               </div>
               <div class="card bg-dark text-white">
@@ -75,17 +76,22 @@
                       <p class="card-text">Rating</p>
                     </div>
                   </div>
-        </div>
+            </div>
        
       </div>
       <div class="col-md-6">
         <div id="map-area">
-            Map area
+            <img src="assets/images/map.png" id="placeholder-map">
         </div>
       
-      </div>
+        </div>
+     </div>
     </div>
-  </div>
+
+    <footer class="page-footer">
+      <img src="assets/images/grassy_footer.png" id="grassy-footer">
+    </footer>
+ 
 
 
 

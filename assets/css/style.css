@@ -33,4 +33,19 @@ li {
 
 .card {
     margin: 50px;
+    max-width: 400px;
+}
+
+#map-area {
+    border: 2px solid black;
+    display: block;
+   
+}
+
+#grassy-footer {
+    max-height: 200px;
+}
+
+#placeholder-map {
+    max-width: 300px;
 }
