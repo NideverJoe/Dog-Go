@@ -2,16 +2,7 @@
 
 var userlat = 0;
 var userlng = 0;
-var resultlat0=0;
-var resultlat1=0;
-var resultlat2=0;
-var resultlat3=0;
-var resultlat4=0;
-var resultlng0=0;
-var resultlng1=0;
-var resultlng2=0;
-var resultlng3=0;
-var resultlng4=0;
+var resultlatlngs=[]; //lat, lng
 
 
 navigator.geolocation.getCurrentPosition(StorePosition);
@@ -49,25 +40,22 @@ function foursquareapicall () {
     })
 
     .then(function (response) {
-        var venueresults = response.response.venues
-
+        var venueresults = response.response.venues;
+        resultlatlngs=[];
         for (var i = 0; i < venueresults.length; i++) {
-            console.log("what up")
+            console.log("what up");
         // console.log(i)
         // console.log(response)
         // console.log(response.response)
         // console.log(response.response.venues)
         // console.log(response.response.venues[i])
-        console.log(venueresults[i]) 
-        console.log("name is " + venueresults[i].name) 
-        console.log("lat is "+venueresults[i].location.lat)
-        userlat[i]= venueresults[i].location.lat
-        console.log("lng is "+venueresults[i].location.lng)
-        userlng[i]= venueresults[i].location.lng
-        console.log(venueresults[i].location.address)
-        console.log(venueresults[i].location.city) 
-        console.log(venueresults[i].location.state) 
-        console.log(venueresults[i].location.postalCode) 
+        console.log(venueresults[i]) ;
+        console.log("name is " + venueresults[i].name) ;
+        resultlatlngs.push([venueresults[i].location.lat, venueresults[i].location.lng]);
+        console.log(venueresults[i].location.address);
+        console.log(venueresults[i].location.city) ;
+        console.log(venueresults[i].location.state) ;
+        console.log(venueresults[i].location.postalCode) ;
 
        
 
@@ -78,15 +66,19 @@ function foursquareapicall () {
         var postalCode=venueresults[i].location.postalCode;
 
 
-        var resultsdiv = $("<div class='card px-2 rounded'>");
+        var resultsdiv = $("<div>");
 
 
 
         resultsdiv.html(`
-        <h3>${name}</h3>
-        <p>${address}</p>
-        <p>${city}, ${state}</p>
-        <p>${postalCode}</p>
+        <div class="card bg-dark text-white">
+        <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
+            <div class="card-img-overlay">
+                <h5 class="card-title" id="place-name">${name}</h5>
+                <p class="card-text" id="place-location">${city}, ${state}</p>
+                <p class="card-text" id="place-zip">${postalCode}</p>
+                <p class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></p>
+            </div> </div>
         `);
 
         $("#results").append(resultsdiv);
@@ -105,16 +97,7 @@ function foursquareapicall () {
 
         //         $("#gifzone").prepend(gifDiv);
             }
-            console.log( resultlat0);
-console.log( resultlat1);
-console.log( resultlat2);
-console.log( resultlat3);
-console.log( resultlat4);
-console.log( resultlng0);
-console.log( resultlng1);
-console.log( resultlng2);
-console.log( resultlng3);
-console.log( resultlng4);
+            console.log(resultlatlngs);
         })
 }
 
