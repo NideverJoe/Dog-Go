@@ -20,15 +20,39 @@ li {
     list-style-type: none;
 }
 
+#header-logo {
+    max-width: 200px;
+}
 
+
+/* ============================================
+              TOP-DIV
+================================================= */
+.top-div {
+
+    border: 10px solid green;
+    height: 300px;
+    width: 600px;
+    margin: 100px auto 0 auto;
+}
+
+#div-logo {
+    margin-top: 50px;
+    max-width: 300px;
+}
+
+.nav-link {
+    color: green;
+}
 
 /* ============================================
                 HOME
 ================================================= */
 
-#listings-area {
+#resultsdiv {
     margin-top: 50px;
-    border: 2px solid red;
+    max-height: 600px;
+    overflow: auto;
 }
 
 .card {
@@ -38,14 +62,14 @@ li {
 
 #map-area {
     border: 2px solid black;
-    display: block;
+    margin-top: 50px;
    
-}
-
-#grassy-footer {
-    max-height: 200px;
 }
 
 #placeholder-map {
     max-width: 300px;
+}
+
+#grassy-footer {
+    max-height: 200px;
 }
