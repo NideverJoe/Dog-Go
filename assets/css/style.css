@@ -1,0 +1,51 @@
+
+/* General CSS */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+}
+
+
+
+/* ============================================
+              NAVBAR
+================================================= */
+
+li {
+    list-style-type: none;
+}
+
+
+
+/* ============================================
+                HOME
+================================================= */
+
+#listings-area {
+    margin-top: 50px;
+    border: 2px solid red;
+}
+
+.card {
+    margin: 50px;
+    max-width: 400px;
+}
+
+#map-area {
+    border: 2px solid black;
+    display: block;
+   
+}
+
+#grassy-footer {
+    max-height: 200px;
+}
+
+#placeholder-map {
+    max-width: 300px;
+}
