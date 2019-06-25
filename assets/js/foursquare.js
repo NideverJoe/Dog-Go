@@ -2,6 +2,7 @@
 
 var userlat = 0;
 var userlng = 0;
+// var userzip = 0;
 var resultlatlngs=[]; //lat, lng
 
 
@@ -32,6 +33,7 @@ function foursquareapicall () {
             v: "20180323",
             limit: "5",
             ll: userlat+","+userlng,
+            // near: userzip,
             categoryId:"4bf58dd8d48988d1e5941735",
             radius: "3000",
         },
@@ -51,7 +53,7 @@ function foursquareapicall () {
         // console.log(response.response.venues[i])
         console.log(venueresults[i]) ;
         console.log("name is " + venueresults[i].name) ;
-        resultlatlngs.push([venueresults[i].location.lat, venueresults[i].location.lng]);
+        resultlatlngs.push([venueresults[i].name, venueresults[i].location.lat, venueresults[i].location.lng]);
         console.log(venueresults[i].location.address);
         console.log(venueresults[i].location.city) ;
         console.log(venueresults[i].location.state) ;
@@ -66,18 +68,18 @@ function foursquareapicall () {
         var postalCode=venueresults[i].location.postalCode;
 
 
-        var resultsdiv = $("<div>");
+        var resultsdiv = $("<div class='py-0'>");
 
 
 
         resultsdiv.html(`
-        <div class="card bg-dark text-white">
+        <div class="card py-0 bg-dark text-white">
         <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
-            <div class="card-img-overlay">
-                <h5 class="card-title" id="place-name">${name}</h5>
-                <p class="card-text" id="place-location">${city}, ${state}</p>
-                <p class="card-text" id="place-zip">${postalCode}</p>
-                <p class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></p>
+            <div class="py-0 card-img-overlay">
+                <h4 class="card-title" id="place-name">${name}</h4>
+                <h5 class="card-text" id="place-location">${city}, ${state}</h5>
+                <h5 class="card-text" id="place-zip">${postalCode}</h5>
+                <h5 class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></h5>
             </div> </div>
         `);
 
