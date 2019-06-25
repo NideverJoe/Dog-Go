@@ -5,17 +5,21 @@ var userlng = 0;
 
 var resultlatlngs = []; //lat, lng
 
+$(document).on("click", ".btn", function(event){
+    event.preventDefault();
+    
+    navigator.geolocation.getCurrentPosition(StorePosition);
 
-navigator.geolocation.getCurrentPosition(StorePosition);
+    function StorePosition(position) {
+    
+        userlat = position.coords.latitude;
+        userlng = position.coords.longitude;
+        foursquareapicall();
+    
+    
+    }
+})
 
-function StorePosition(position) {
-
-    userlat = position.coords.latitude;
-    userlng = position.coords.longitude;
-    foursquareapicall();
-
-
-}
 
 
 //Working api call
