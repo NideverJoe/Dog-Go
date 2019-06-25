@@ -74,15 +74,15 @@ li {
     max-width: 400px;
 }
 
-#map-area {
-    border: 2px solid black;
+#map {
+    height: 100%;
+    /* border: 2px solid black; */
     margin-top: 50px;
-   
 }
 
-#placeholder-map {
+/* #placeholder-map {
     max-width: 300px;
-}
+} */
 
 
 #grassy-footer {
