@@ -124,7 +124,6 @@ function foursquareapicall() {
 
     function resultsdivdisplay() {
         $('#splash').hide();
-        $('#video').hide();
         $('#navbar').show();
         $('#resultsandmap').show();
     }
