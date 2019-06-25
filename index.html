@@ -35,24 +35,21 @@
       <img src="assets/images/Capture2.PNG" class="d-inline-block align-top" id="header-logo" alt="dog-go">
     </a>
     <form class="form-inline">
-      <ul class="navbar-nav"></ul>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">I'm Searching For</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Dog Parks</a>
-          <a class="dropdown-item" href="#">Dog Groomers</a>
-          <a class="dropdown-item" href="#">Veterinarians</a>
-          <a class="dropdown-item" href="#">Boarding</a>
-        </div>
-      </li>
-      </ul>
+        <select id="usercategory" class="form-control">
+            <option selected value="4bf58dd8d48988d1e5941735">Dog Parks</option>
+            <option value="5032897c91d4c4b30a586d69">Dog Groomers</option>
+            <option value="4d954af4a243a5684765b473">Veterinarians</option>
+            <option value="4bf58dd8d48988d100951735">Pet Store</option>
+        </select>
       <button class="btn btn-success my-2 my-sm-0" id="fetch" type="submit">Go Fetch</button>
     </form>
     <div class="gradient"></div>
   </nav>
 
-
+  <!-- Veterinarian = 4d954af4a243a5684765b473
+  dog run = 4bf58dd8d48988d1e5941735
+  pet service = 5032897c91d4c4b30a586d69
+  pet store = 4bf58dd8d48988d100951735 -->
 
   <!-- SPLASH -->
   <div id="splash" class="container">
@@ -60,25 +57,34 @@
       <div class="row">
         <div class="col-md-6 offset-md-3">
           <img src="assets/images/Capture2.PNG" id="div-logo">
-          <form class="form-inline">
-            <ul class="navbar-nav"></ul>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">I'm Searching For</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Dog Parks</a>
-                <a class="dropdown-item" href="#">Dog Groomers</a>
-                <a class="dropdown-item" href="#">Veterinarians</a>
-                <a class="dropdown-item" href="#">Boarding</a>
-              </div>
-            </li>
-            </ul>
+          <form name="userform" class="form-inline">
+              <select name="usercategory" class="form-control">
+                  <option selected value="4bf58dd8d48988d1e5941735">Dog Parks</option>
+                  <option value="5032897c91d4c4b30a586d69">Dog Groomers</option>
+                  <option value="4d954af4a243a5684765b473">Veterinarians</option>
+                  <option value="4bf58dd8d48988d100951735">Pet Store</option>
+              </select>
             <button class="btn btn-success my-2 my-sm-0" type="submit">Go Fetch</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+<!-- 
+  <div id= "loading" class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+      <div class="card text-center">
+        <img class="card-img-top" src="assets/images/giphy (1).gif" alt="Loading">
+        <div class="card-body">
+          <h5 class="card-title">Loading...</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5"></div>
+
+  </div> -->
+
 
   <div id="resultsandmap" class="container-fluid">
     <div class="row">
