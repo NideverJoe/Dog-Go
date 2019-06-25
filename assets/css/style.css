@@ -39,7 +39,7 @@ li {
 
 
 /* ============================================
-              TOP-DIV
+              splash 
 ================================================= */
 .top-div {
 
@@ -48,6 +48,8 @@ li {
     width: 600px;
     margin: 200px auto 0 auto;
     background-color: #fff;
+    z-index:10;
+    position: relative;
 }
 
 #div-logo {
@@ -59,14 +61,21 @@ li {
     color: green;
 }
 
+#video {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+}
+
 /* ============================================
                 HOME
 ================================================= */
 
-#resultsdiv {
+#results {
     margin-top: 50px;
     max-height: 600px;
     overflow: auto;
+    border: 2px solid #e8e7e7;
 }
 
 .card {
@@ -78,14 +87,19 @@ li {
     height: 100%;
     /* border: 2px solid black; */
     margin-top: 50px;
+    border: 2px solid #e8e7e7;
 }
 
-/* #placeholder-map {
-    max-width: 300px;
-} */
-
-
-#grassy-footer {
+/* #grassy-footer {
     max-height: 200px;
     width: auto;
+    z-index: 10;
+} */
+
+.page-footer {
+    height: 100px;
+    background-image: url("../images/grassy_footer.png");
+    width: 100%;
+    z-index: 100;
+    background-size: 100% 100%;
 }
