@@ -2,11 +2,20 @@
 
 var userlat = 0;
 var userlng = 0;
+var usercategory = "";
 
 var resultlatlngs = []; //lat, lng
 
 $(document).on("click", ".btn", function (event) {
     event.preventDefault();
+
+
+    usercategory = document.forms["userform"]["usercategory"].value;
+    if (usercategory == "") {
+      alert("Pick a category! Woof!");
+      return ;
+    }
+
 
     navigator.geolocation.getCurrentPosition(StorePosition);
 
@@ -41,7 +50,7 @@ function foursquareapicall() {
             limit: "5",
 
             ll: userlat + "," + userlng,
-            categoryId: "4bf58dd8d48988d1e5941735",
+            categoryId: usercategory,
             radius: "3000",
         },
         method: "GET",
@@ -81,6 +90,7 @@ function foursquareapicall() {
 
 
                 resultsdiv.html(`
+
         <div class="card py-0 bg-dark text-white">
         <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
             <div class="py-0 card-img-overlay">
@@ -91,7 +101,7 @@ function foursquareapicall() {
             </div> </div>
         `);
 
-                $("#results").append(resultsdiv);
+                $("#results").prepend(resultsdiv);
 
                 runMap(venueresults);
 
@@ -112,16 +122,19 @@ function foursquareapicall() {
         })
 }
 
-function initaldivdisplay() {
-    $('#splash').show();
-    $('#navbar').hide();
-    $('#resultsandmap').hide();
-}
 
-function resultsdivdisplay() {
-    $('#splash').hide();
-    $('#navbar').show();
-    $('#resultsandmap').show();
-}
+    function initaldivdisplay() {
+        $('#splash').show();
+        $('#navbar').hide();
+        // $('#loading').hide();
+        $('#resultsandmap').hide();
+    }
+
+    function resultsdivdisplay() {
+        $('#splash').hide();
+        $('#video').hide();
+        $('#navbar').show();
+        $('#resultsandmap').show();
+    }
 
 initaldivdisplay();
