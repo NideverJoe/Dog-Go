@@ -1,3 +1,6 @@
+tippy('button')
+
+
 // get user location and store as variable
 
 var userlat = 0;
