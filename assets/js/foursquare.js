@@ -3,6 +3,7 @@
 var userlat = 0;
 var userlng = 0;
 var usercategory = "";
+var cardimage = "";
 
 var resultlatlngs = []; //lat, lng
 
@@ -39,6 +40,18 @@ $(document).on("click", ".btn", function (event) {
 https://api.foursquare.com/v2/venues/search?client_id=PNXMQSVLHPQQUTUYQLGUPVZOMX1LSE5NPHRWVF1NG3PINRQU&client_secret=FRSFYMBNKSKMI34AIKNI1CEBRMHDLYRHQJB5WHSV1PZCKTJA&v=20180323&limit=10&ll=32.8387891,-96.7857465&categoryId=4bf58dd8d48988d1e5941735&radius=32000
 function foursquareapicall() {
 
+if (usercategory == "4bf58dd8d48988d1e5941735"){
+    cardimage = "assets/images/dog-park.jpg"
+}
+else if (usercategory == "5032897c91d4c4b30a586d69"){
+    cardimage = "assets/images/groomers.jpg"
+} 
+else if (usercategory == "4d954af4a243a5684765b473"){
+    cardimage = "assets/images/vet.jpg"
+} 
+else if (usercategory == "4bf58dd8d48988d100951735"){
+    cardimage = "assets/images/store.jpg"
+} 
     var queryURL = "https://api.foursquare.com/v2/venues/search";
 
     $.ajax({
@@ -88,18 +101,37 @@ function foursquareapicall() {
 
                 var resultsdiv = $("<div class='py-0'>");
 
-
+if (usercategory=="4bf58dd8d48988d1e5941735"){
                 resultsdiv.html(`
 
         <div class="card py-0 bg-dark text-white">
-        <img class="card-img" src="assets/images/dog-park.jpg" alt="Card image">
-            <div class="py-0 card-img-overlay">
+        <img class="card-img" src=${cardimage} alt="Card image" style=>
+            <div class="py-0 card-img-overlay" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black">
+                <p></p>
                 <h4 class="card-title" id="place-name">${name}</h4>
                 <h5 class="card-text" id="place-location">${city}, ${state}</h5>
                 <h5 class="card-text" id="place-zip">${postalCode}</h5>
-                <h5 class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></h5>
+
             </div> </div>
         `);
+} else if (usercategory=="5032897c91d4c4b30a586d69" || usercategory=="4d954af4a243a5684765b473" || usercategory=="4bf58dd8d48988d100951735"){
+    resultsdiv.html(`
+
+    <div class="card py-0 bg-dark text-white">
+    <img class="card-img" src=${cardimage} alt="Card image" style=>
+        <div class="py-0 card-img-overlay" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black">
+            <p></p>
+            <h4 class="card-title" id="place-name">${name}</h4>
+            <h4 class="card-title" id="place-address">${address}</h4>
+            <h5 class="card-text" id="place-location">${city}, ${state}</h5>
+            <h5 class="card-text" id="place-zip">${postalCode}</h5>
+
+        </div> </div>
+    `);
+
+}
+        // <h5 class="card-text" id="rating">Rating: <i class="fas fa-paw"></i><i class="fas fa-paw"></i></h5>
+
 
                 $("#results").prepend(resultsdiv);
 
