@@ -37,6 +37,10 @@ li {
     background-image: linear-gradient(to top, green , white);
 }
 
+#fetch {
+    margin-right: 50px;
+}
+
 
 /* ============================================
               splash 
@@ -61,11 +65,22 @@ li {
     color: green;
 }
 
+
+/* VIDEO */
+
+/* #container {
+    overflow: hidden;
+    position: relative;
+    height: 1080px;
+    background: black;
+} */
+
 #video {
     z-index: 1;
     position: absolute;
-    top: 0;
-    size: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ============================================
