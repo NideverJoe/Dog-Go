@@ -16,14 +16,17 @@ function runMap(results) {
 
 
         var locations = [];
-
+        console.log(locations);
         results.forEach(function (ele) {
             console.log(ele);
             locations.push([
                 ele.name,
                 ele.location.lat,
-                ele.location.lng
+                ele.location.lng,
+                ele.location.formattedAddress[0],
+                ele.location.formattedAddress[1]
             ]);
+
 
 
         });
@@ -49,7 +52,8 @@ function runMap(results) {
             map = new google.maps.Map(document.getElementById('map'), myOptions);
 
             var infowindow = new google.maps.InfoWindow();
-
+            // var opts = new google.maps.InfoWindowOptions();
+            // var windowOptions = "<div>" + "<h2>" + locations[i][0] + "</h2>" + "<br></br>" + locations[i][3] + "<br></br>" + locations[i][4]
             var marker, i;
 
             for (i = 0; i < locations.length; i++) {
@@ -57,17 +61,17 @@ function runMap(results) {
                     position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                     map: map
                 });
-
+                // var windowOptions = "<div>" + "<h2>" + locations[i][0] + "</h2>" + "<br></br>" + locations[i][3] + "<br></br>" + locations[i][4]
                 google.maps.event.addListener(marker, 'click', (function (marker, i) {
                     return function () {
-                        infowindow.setContent(locations[i][0]);
+                        infowindow.setContent("<div>" + "<h3>" + locations[i][0] + "</h3>" + "<br></br>" + locations[i][3] + "<br></br>" + locations[i][4]);
                         infowindow.open(map, marker);
                     }
                 })(marker, i));
             };
         });
         console.log(resultlatlngs);
-    }, 3000)
+    }, 1000)
 
     function stopInterval() {
         clearInterval(interval)
