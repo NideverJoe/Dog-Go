@@ -1,0 +1,188 @@
+
+/* General CSS */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    background-color: wheat;
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    background-image:  url(../images/background1.jpg);
+    background-image: linear-gradient(
+      rgba(47, 177, 238, 0.32),
+      rgba(47, 177, 238, 0.32),
+    ),
+      url(../images/background1.jpg);
+    margin:  9em;
+    color:  white;
+    font-family:  Verdana, "Palatino", Georgia, "Courier New", sans-serif;
+    background-position: 85% 12%;}
+
+#grassy-footer {
+        max-height: 200px;
+        position: running(footer);
+}
+        
+    
+
+    .navbar_brand{
+        border: 3em;
+        border-color: black;
+        color: yellow;
+
+    }
+
+    #logo{
+        border: 3em;
+        border: brown;
+        color:  white;
+        
+    }
+    /*h1{
+        font-size:  300%;
+        box-shadow:  10px, 10px, 10px, 10px, #000000,inset 2px;
+        text-shadow: 2px, red;
+    }
+    h2{
+        font-size:  x-large;
+        text-align:  center;
+    }
+    h3{
+        font-size: medium;
+        color: black;
+    }
+    
+    p{
+        font-size:  large;
+        color:  black;
+    }
+    #openingQuestion{
+        width: 20em;
+    }
+    
+    .options{
+        font-size:x-large;
+        color:;
+        position: 90% 15%;
+    }
+    .question{
+        font-size:xx-large;
+        width: 25em;
+        padding: 0em;
+        margin:  0em;
+        border-style:  double;
+        border-width:  0.2em;
+        border-radius:  1em;
+        border-color:  black;
+        text-align: center;
+        justify-content: center;
+*/
+    .dropdown-menu{
+        font-size: 18pt;
+        border-style: double;
+        border-width:  0.5em;
+        border-radius:  1em;
+        border-color:  black;
+        text-align:  center;
+        float:  center;
+        margin:  1em, 1em, 0em, 1em;
+    }
+    /*
+    form{
+        vertical-align:  center;
+        
+    }
+    .imagesPresidents{
+        height:25em;
+    }
+    */
+
+    .card-img-overlay{
+        height: 5em;
+        width:  5em;
+
+    }
+    .card-img{
+      height: 18em;
+      width: 21em;
+      border-width:  1em;
+      border-radius:  2em;
+      border-color: #16301d;
+      padding: 0em;
+      margin:  40em,40em,40em,40em;
+      border-style:  ridge;
+      }
+    
+ */
+    .btn-success my-2 my-sm-0{
+        size:  2em;
+        background-color:yellow;
+        color: black;
+        font-style: bold;
+        position: 100%, 50%;
+        align-content:  center;
+        text-align: center;
+        padding:  0em, 1em, 1em, 1em;
+        margin:  0em, 1em, 1em, 1em;
+    }
+    /*
+    #openingButton{
+        size:  3em;
+        background-color:  yellow;
+        color:  black;
+        font-style:  bold;
+        position:  100% 50%;
+        align-content:  center;
+        text-align:  center;
+        padding:  0.5em;
+        margin:  15em;
+    }
+    .statements{
+        align-content:  left;
+        font-style:  bold;
+        
+    }
+}
+
+
+
+/* ============================================
+              NAVBAR
+================================================= */
+
+li {
+    list-style-type: none;
+}
+
+*/
+
+/* ============================================
+                HOME
+================================================= */
+
+#listings-area {
+    margin-top: 50px;
+    border: 2px solid rgb(17, 12, 12);
+}
+
+.card {
+    margin: 50px;
+    max-width: 400px;
+}
+
+#map-area {
+    border: 2px solid black;
+    display: block;
+   
+}
+
+    
+}
+
+#placeholder-map {
+    max-width: 300px;
+}
