@@ -8,6 +8,9 @@ html, body {
 body {
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
+    background-color: #fff;
+    /* #e0e1e2; */
+    /* #f8f9fa; */
 }
 
 
@@ -20,15 +23,65 @@ li {
     list-style-type: none;
 }
 
+#header-logo {
+    max-width: 200px;
+}
 
+.navbar {
+    background-color: #fff;;
+}
+
+.gradient {
+    height: 50px;
+    width: 100%;
+    background-image: linear-gradient(to top, green , white);
+}
+
+
+/* ============================================
+              splash 
+================================================= */
+.top-div {
+
+    border: 10px solid green;
+    height: 300px;
+    width: 600px;
+    /* margin: 200px auto 0 auto; */
+    background-color: #fff;
+    z-index:10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#div-logo {
+    margin-top: 50px;
+    max-width: 300px;
+}
+
+.nav-link {
+    color: green;
+}
+
+#video {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* ============================================
                 HOME
 ================================================= */
 
-#listings-area {
+#results {
     margin-top: 50px;
-    border: 2px solid red;
+    max-height: 600px;
+    overflow: auto;
+    border: 2px solid #e8e7e7;
 }
 
 .card {
@@ -36,16 +89,29 @@ li {
     max-width: 400px;
 }
 
-#map-area {
-    border: 2px solid black;
-    display: block;
-   
+.card-img {
+    width: 100%;
+    border-radius: calc(.25rem - 1px);
+    opacity: 0.4;}
+
+#map {
+    height: 100%;
+    /* border: 2px solid black; */
+    margin-top: 50px;
+    border: 2px solid #e8e7e7;
 }
 
-#grassy-footer {
+/* #grassy-footer {
     max-height: 200px;
+    width: auto;
+    z-index: 10;
+} */
+
+.page-footer {
+    /* height: 100px;
+    background-image: url("../images/grassy_footer.png");
+    width: 100%;
+    z-index: 100;
+    background-size: 100% 100%; */
 }
 
-#placeholder-map {
-    max-width: 300px;
-}
