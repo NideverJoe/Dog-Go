@@ -3,7 +3,7 @@ Dog-go is a solution to finding all your dogs' needs right nearby: from dog park
 
 
 ## Getting Started
-[Live Link](https://nideverjoe.github.io/Project_-_1/)
+[Live Link](https://nideverjoe.github.io/Dog-Go/)
 
 ## Built With
 * HTML
